@@ -6,58 +6,8 @@
     <v-toolbar-title>
       <v-toolbar-side-icon @click="toggleNavigationBar"></v-toolbar-side-icon>
     </v-toolbar-title>
-    <v-text-field
-      flat
-      solo-inverted
-      append-icon="search"
-      :label="$t('search')">
-    </v-text-field>
-    <v-spacer></v-spacer>
-
-    <v-dialog
-      v-model="dialogSettings"
-      width="700">
-      <v-card>
-        <v-card-title class="headline"
-          primary-title>
-          Settings
-        </v-card-title>
-
-        <v-card-text>
-          Choose theme color ?
-          <swatches v-model="$root.themeColor" inline colors="material-dark" :exceptions="['#FFFFFF']" shapes="circles" show-border></swatches>
-        </v-card-text>
-
-
-        <v-divider></v-divider>
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="primary"
-            flat
-            @click="setUpSettings">
-            Save Changes
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-
-    <v-snackbar
-      v-model="showResult"
-      :timeout="2000"
-      top>
-      {{ result }}
-    </v-snackbar>
-
-
 
     <v-menu class="toolbar-menu-item" offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
-      <v-btn icon large flat slot="activator" :ripple="false">
-        <v-avatar size="42px">
-          <img src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Sunglasses&hairColor=Black&facialHairType=Blank&clotheType=CollarSweater&clotheColor=Black&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Light"/>
-        </v-avatar>
-      </v-btn>
       <v-list>
         <v-list-tile
           v-for="(item,index) in items"

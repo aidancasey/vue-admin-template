@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-if="!$route.meta.allowAnonymous">
+    <template>
       <v-app id="inspire">
         <div class="app-container">
           <toolbar @toggleNavigationBar="drawer = !drawer"/>
@@ -12,13 +12,6 @@
           </v-content>
         </div>
       </v-app>
-    </template>
-    <template v-else>
-      <transition>
-        <keep-alive>
-          <router-view></router-view>
-        </keep-alive>
-      </transition>
     </template>
   </div>
 </template>
