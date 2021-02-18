@@ -7,7 +7,6 @@ import Media from '../pages/Media.vue';
 import Snackbar from '../pages/Snackbar.vue';
 import Chart from '../pages/Chart.vue';
 import Mailbox from '../pages/Mailbox.vue';
-import Calendar from '../pages/Calendar.vue';
 import Login from '../pages/core/Login.vue';
 import Error from '../pages/core/Error.vue';
 
@@ -46,17 +45,6 @@ export default new Router({
         breadcrumb: [
           { name: 'dashboard', href: 'Dashboard' },
           { name: 'snackbar' }
-        ]
-      }
-    },
-    {
-      path: '/calendar',
-      name: 'Calendar',
-      component: Calendar,
-      meta: {
-        breadcrumb: [
-          { name: 'dashboard', href: 'Dashboard' },
-          { name: 'calendar' }
         ]
       }
     },
