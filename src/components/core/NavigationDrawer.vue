@@ -18,13 +18,6 @@
         <v-list-tile-title :class="[{'active': selectedIndex === 1}, 'item-title' ]" >{{ $t('dashboard') }}</v-list-tile-title>
       </v-list-tile>
 
-      <v-list-tile @click="changeRoute('Mailbox', 3)">
-        <v-list-tile-action>
-          <v-icon>mail</v-icon>
-        </v-list-tile-action>
-        <v-list-tile-title :class="[{'active': selectedIndex === 3}, 'item-title' ]">{{ $t('mailbox') }}</v-list-tile-title>
-      </v-list-tile>
-
       <v-list-group
         prepend-icon="pageview">
         <v-list-tile slot="activator">
@@ -42,24 +35,12 @@
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 5}, 'item-title' ]">{{ $t('charts') }}</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile @click="changeRoute('Media', 6)">
-          <v-list-tile-action>
-            <v-icon>perm_media</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title :class="[{'active': selectedIndex === 6}, 'item-title' ]">{{ $t('media') }}</v-list-tile-title>
-        </v-list-tile>
     </v-list-group>
 
       <v-list-group
         prepend-icon="select_all">
         <v-list-tile slot="activator">
           <v-list-tile-title class="item-title">{{ $t('overlays') }}</v-list-tile-title>
-        </v-list-tile>
-        <v-list-tile @click="changeRoute('Snackbar', 7)">
-          <v-list-tile-action>
-            <v-icon>event_note</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title :class="[{'active': selectedIndex === 7}, 'item-title' ]">{{ $t('snackbar') }}</v-list-tile-title>
         </v-list-tile>
     </v-list-group>
 
