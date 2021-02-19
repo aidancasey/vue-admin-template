@@ -6,13 +6,6 @@
       :color="$root.themeColor"
       class="text-xs-center">
       <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-3 white--text"
-          icon>
-          <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
@@ -32,13 +25,7 @@
 export default {
   data() {
     return {
-      icons: [
-        'fab fa-facebook',
-        'fab fa-twitter',
-        'fab fa-google-plus',
-        'fab fa-linkedin',
-        'fab fa-instagram'
-      ]
+
     }
   }
 }
