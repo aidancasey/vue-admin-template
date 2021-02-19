@@ -19,7 +19,6 @@ Vue.use(VueAxios, axios);
 
 import VueChartkick from 'vue-chartkick';
 import Chart from 'chart.js';
-import fullCalendar from 'vue-fullcalendar';
 import { setupComponents } from './config/setup-components';
 
 import { setupAndGetI18n } from './config/setup-i18n';
@@ -30,7 +29,6 @@ import swatches from 'vue-swatches';
 import "vue-swatches/dist/vue-swatches.min.css"
 
 Vue.use(VueChartkick, { adapter: Chart });
-Vue.component('full-calendar', fullCalendar);
 Vue.component('swatches', swatches);
 
 setupComponents(Vue);
@@ -57,11 +55,11 @@ new Vue({
       const vm = this;
 
       localStorage.setItem('language', language);
-    
+
       document.documentElement.lang = language;
-    
+
       vm.$i18n.locale = language;
-    
+
       vm.$vuetify.lang.current = language;
     }
   },

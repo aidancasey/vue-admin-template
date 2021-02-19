@@ -84,12 +84,6 @@ export default {
 
       vm.dialogSettings = false;
     },
-
-    selectLanguage(code) {
-      const vm = this;
-
-      vm.$root.setLanguage(code);
-    }
   }
 };
 </script>
